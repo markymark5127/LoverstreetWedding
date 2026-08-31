@@ -108,10 +108,21 @@ button, input, select, textarea { font: inherit; }
 .btn.coral:hover { background: #9d4e46; }
 .menu-toggle {
   display: none;
-  background: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
   border: 0;
-  font-size: 1.4rem;
+  padding: 8px;
+  color: var(--ink);
+  -webkit-text-fill-color: var(--ink);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.menu-toggle svg {
+  display: block;
+  width: 24px;
+  height: 18px;
+  stroke: currentColor;
 }
 
 .hero {

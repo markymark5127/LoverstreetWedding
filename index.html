@@ -9,15 +9,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/logo-mark.svg" />
 </head>
 <body>
   <header class="nav" id="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top">
-        <strong>Loverstreet</strong>
-        <span>Wedding Ceremonies</span>
+      <a class="brand brand-lockup" href="#top">
+        <img src="assets/logo-mark.svg" alt="" width="44" height="44" />
+        <span class="logo-wordmark">
+          <strong>Loverstreet</strong>
+          <span>Wedding Ceremonies</span>
+        </span>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">&#9776;</button>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#packages">Packages</a></li>
@@ -31,10 +36,7 @@
   <main id="top">
     <section class="hero">
       <div class="hero-media" aria-hidden="true">
-        <img
-          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=80"
-          alt="Couple holding hands during a wedding ceremony"
-        />
+        <img src="assets/Katelyn Photo Clean.jpg" alt="Katelyn Overstreet officiating a wedding ceremony" />
       </div>
       <div class="hero-copy">
         <p class="eyebrow">Forest, Virginia · Authorized Celebrant</p>
@@ -55,8 +57,8 @@
     <section id="about">
       <div class="wrap about-grid">
         <div class="photo-stack">
-          <img class="main" src="https://loverstreetweddingceremonies.com/wp-content/uploads/2023/02/messages_0-2.jpeg" alt="Katelyn Overstreet at a wedding showcase table" />
-          <img class="accent" src="https://loverstreetweddingceremonies.com/wp-content/uploads/2022/01/screenshot-2022-01-23-11.25.06-pm.png" alt="Katelyn reading during a ceremony" />
+          <img class="main" src="assets/Katelyn Buisness.jpg" alt="Katelyn Overstreet, wedding officiant" />
+          <img class="accent" src="assets/Katelyn Adventure.jpg" alt="Katelyn outdoors" />
         </div>
         <div class="about-copy">
           <p class="section-kicker">Meet Katelyn</p>
@@ -169,7 +171,7 @@
           <blockquote>
             “From the moment we started chatting with her, we knew that Katelyn would likely be the one. Her gentle nature and kind spirit drew us right in. She has been a great communicator and made the entire process so easy and stress free. Katelyn is kind, patient, organized, and a great communicator. We couldn’t recommend working with Katelyn enough.”
           </blockquote>
-          <footer>— Emmy</footer>
+          <p class="quote-attr">— Emmy</p>
         </div>
       </div>
     </section>
@@ -226,7 +228,7 @@
     </section>
   </main>
 
-  <footer class="wrap">
+  <footer class="wrap site-footer">
     <div>© <span id="year"></span> Loverstreet Wedding Ceremonies · Katelyn Overstreet</div>
     <div>Authorized marriage celebrant · Forest, Virginia</div>
   </footer>

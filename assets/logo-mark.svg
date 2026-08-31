@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Loverstreet mark">
+  <circle cx="60" cy="60" r="54" fill="#3d5650"/>
+  <path d="M60 38c7.8-9.6 21.6-8.9 27.3 1.6 5 9.1.9 20.2-9.1 28.8L60 84.6 41.8 68.4c-10-8.6-14.1-19.7-9.1-28.8C38.4 29.1 52.2 28.4 60 38z" fill="#f7f1ea"/>
+  <path d="M46.2 57.8c7.8 0 11.7 3.7 13.6 8.9 1.9-5.2 5.8-8.9 13.6-8.9" fill="none" stroke="#c97b72" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

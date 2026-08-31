@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-label="Loverstreet Wedding Ceremonies">
+  <defs>
+    <linearGradient id="markFill" x1="20" y1="16" x2="100" y2="104" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4a6b66"/>
+      <stop offset="100%" stop-color="#3d5650"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="46" fill="url(#markFill)"/>
+  <path d="M60 41c7.2-8.8 20-8.2 25.2 1.4 4.6 8.4.8 18.6-8.4 26.6L60 84.8 43.2 69c-9.2-8-13-18.2-8.4-26.6C40 32.8 52.8 32.2 60 41z" fill="#f7f1ea"/>
+  <path d="M47.5 58.5c7.2 0 10.8 3.4 12.5 8.2 1.7-4.8 5.3-8.2 12.5-8.2" fill="none" stroke="#c97b72" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="124" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#2b2420">Loverstreet</text>
+  <text x="126" y="84" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="3.6" fill="#6d7f76">WEDDING CEREMONIES</text>
+</svg>

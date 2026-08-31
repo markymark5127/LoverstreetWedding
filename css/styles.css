@@ -77,6 +77,10 @@ button, input, select, textarea { font: inherit; }
   color: var(--ink-soft);
 }
 .nav-links a:hover { color: var(--ink); }
+.nav-links a.btn,
+.nav-links a.btn:hover {
+  color: #fff;
+}
 .btn {
   display: inline-flex;
   align-items: center;
@@ -95,6 +99,10 @@ button, input, select, textarea { font: inherit; }
   background: transparent;
   color: var(--ink);
   border: 1px solid var(--line);
+}
+.hero .btn.ghost {
+  color: #fff;
+  border-color: rgba(255,255,255,0.45);
 }
 .btn.coral { background: var(--coral-deep); }
 .btn.coral:hover { background: #9d4e46; }
@@ -123,6 +131,7 @@ button, input, select, textarea { font: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 28%;
   filter: saturate(0.92);
 }
 .hero-media::after {
@@ -202,6 +211,7 @@ h2 {
   height: 560px;
   width: 100%;
   object-fit: cover;
+  object-position: 50% 20%;
   box-shadow: var(--shadow);
 }
 .photo-stack .accent {
@@ -245,6 +255,9 @@ h2 {
   color: #fff;
   border-color: transparent;
   transform: translateY(-8px);
+}
+.card.featured .section-kicker {
+  color: #f4ddd4;
 }
 .card h3 {
   font-family: var(--serif);
@@ -302,9 +315,14 @@ blockquote {
   line-height: 1.45;
   font-weight: 500;
 }
-.quote-block footer {
+.quote-block .section-kicker {
+  color: #f4ddd4;
+}
+.quote-attr {
   margin-top: 22px;
-  opacity: 0.85;
+  color: #fff;
+  font-size: 1rem;
+  opacity: 1;
 }
 
 .contact-grid {
@@ -338,7 +356,7 @@ textarea { min-height: 120px; resize: vertical; }
 .contact-aside p { color: var(--ink-soft); margin-bottom: 18px; }
 .contact-links { display: flex; flex-direction: column; gap: 10px; margin: 18px 0 28px; }
 
-footer {
+.site-footer {
   border-top: 1px solid var(--line);
   padding: 28px 0 40px;
   color: var(--ink-soft);
@@ -346,6 +364,21 @@ footer {
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
+}
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand-lockup img,
+.brand-lockup svg {
+  width: 44px;
+  height: 44px;
+}
+.logo-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
 }
 
 @media (max-width: 980px) {

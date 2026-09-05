@@ -30,7 +30,7 @@ if (form) {
     ].join("\n");
 
     const sms = `sms:4436173483?&body=${encodeURIComponent(body)}`;
-    const mail = `mailto:hello@loverstreetweddingceremonies.com?subject=${encodeURIComponent("Wedding inquiry from " + (data.names || "a couple"))}&body=${encodeURIComponent(body)}`;
+    const mail = `mailto:katelyncoverstreet@gmail.com?subject=${encodeURIComponent("Wedding inquiry from " + (data.names || "a couple"))}&body=${encodeURIComponent(body)}`;
 
     window.location.href = sms;
     setTimeout(() => {

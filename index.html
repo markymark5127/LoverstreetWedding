@@ -32,6 +32,7 @@
         <li><a href="#packages">Packages</a></li>
         <li><a href="#process">The Process</a></li>
         <li><a href="#kind-words">Kind Words</a></li>
+        <li><a href="#leave-review">Leave a Review</a></li>
         <li><a href="#contact" class="btn">Inquire</a></li>
       </ul>
     </div>
@@ -177,6 +178,58 @@
           </blockquote>
           <p class="quote-attr">— Emmy</p>
         </div>
+      </div>
+    </section>
+
+    <section id="leave-review">
+      <div class="wrap contact-grid">
+        <div class="contact-aside">
+          <p class="section-kicker">Share your experience</p>
+          <h2>Leave a review.</h2>
+          <p>If Katelyn was part of your wedding day, we would love to hear what the experience meant to you. Your feedback helps future couples feel confident choosing the right officiant for their ceremony.</p>
+          <p>Reviews are sent directly to Katelyn for approval and may be featured on the Loverstreet Wedding Ceremonies website. Your email address is only used to identify the submission and will not be displayed publicly.</p>
+        </div>
+        <form class="contact-card" id="reviewForm" action="https://formsubmit.co/katelyncoverstreet@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Loverstreet Wedding Ceremony review" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="https://loverstreetweddingceremonies.com/?review-submitted=true#leave-review" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <div class="form-row">
+            <div>
+              <label for="reviewNames">Your names</label>
+              <input id="reviewNames" name="names" required placeholder="Alex & Jordan" />
+            </div>
+            <div>
+              <label for="reviewEmail">Email</label>
+              <input id="reviewEmail" name="email" type="email" required placeholder="you@email.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="reviewDate">Wedding date</label>
+              <input id="reviewDate" name="wedding_date" type="date" />
+            </div>
+            <div>
+              <label for="reviewRating">Rating</label>
+              <select id="reviewRating" name="rating" required>
+                <option value="">Choose a rating</option>
+                <option value="5 stars">★★★★★ — 5 stars</option>
+                <option value="4 stars">★★★★☆ — 4 stars</option>
+                <option value="3 stars">★★★☆☆ — 3 stars</option>
+                <option value="2 stars">★★☆☆☆ — 2 stars</option>
+                <option value="1 star">★☆☆☆☆ — 1 star</option>
+              </select>
+            </div>
+          </div>
+          <label for="reviewMessage">Your review</label>
+          <textarea id="reviewMessage" name="review" required minlength="20" placeholder="Tell future couples about your experience with Katelyn..."></textarea>
+          <label style="display:flex;align-items:flex-start;gap:10px;margin-top:16px;cursor:pointer">
+            <input type="checkbox" name="permission_to_feature" value="Yes" required style="width:auto;margin-top:5px" />
+            <span>I give Loverstreet Wedding Ceremonies permission to feature this review on the website or social media.</span>
+          </label>
+          <button class="btn coral" type="submit" style="margin-top:18px;width:100%">Submit review</button>
+          <p class="form-status" id="reviewStatus"></p>
+        </form>
       </div>
     </section>
 

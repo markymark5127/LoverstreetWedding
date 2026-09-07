@@ -22,3 +22,13 @@ Optional: point `loverstreetweddingceremonies.com` at GitHub Pages and add a `CN
 - Inquiry form opens a text to 443-617-3483 and a mailto. Replace `hello@loverstreetweddingceremonies.com` in `js/main.js` with Katelyn’s real inbox, or wire the form to Formspree.
 - Katelyn’s photos load from the existing WordPress media library. Swap in higher-resolution originals anytime.
 - Travel fee and rehearsal upgrade are included on the packages section.
+
+
+## Publishing an approved review
+
+1. Open the repository’s **Actions** tab.
+2. Select **Add approved review**.
+3. Choose **Run workflow**, enter the couple’s names, rating, optional date, and approved review.
+4. Choose **Run workflow** again. The action updates `js/reviews.js`; GitHub Pages then publishes the new review automatically.
+
+Review submissions continue to go to Katelyn by email first, so nothing is posted publicly without approval.

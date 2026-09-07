@@ -22,17 +22,8 @@ if (reviewStatus && params.get("review-submitted") === "true") {
   reviewStatus.textContent = "Thank you! Your review has been sent to Katelyn.";
 }
 
-// Approved reviews shown publicly on the website.
-// Add future approved submissions here after Katelyn reviews them.
-const approvedReviews = [
-  {
-    name: "Emmy",
-    rating: null,
-    date: "",
-    review:
-      "From the moment we started chatting with her, we knew that Katelyn would likely be the one. Her gentle nature and kind spirit drew us right in. She has been a great communicator and made the entire process so easy and stress free. Katelyn is kind, patient, organized, and a great communicator. We couldn’t recommend working with Katelyn enough."
-  }
-];
+// Approved reviews are maintained in js/reviews.js by the GitHub Action.
+const approvedReviews = window.approvedReviews || [];
 
 const reviewShowcase = document.querySelector("#kind-words .quote-block");
 

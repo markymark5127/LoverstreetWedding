@@ -1,0 +1,84 @@
+name: Add approved review
+
+on:
+  workflow_dispatch:
+    inputs:
+      names:
+        description: "Couple's names (shown publicly)"
+        required: true
+        type: string
+      rating:
+        description: "Star rating"
+        required: true
+        default: "5"
+        type: choice
+        options:
+          - "5"
+          - "4"
+          - "3"
+          - "2"
+          - "1"
+      wedding_date:
+        description: "Wedding date or display date (optional)"
+        required: false
+        type: string
+      review:
+        description: "Approved review text"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-approved-review
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Add approved review
+        env:
+          REVIEW_NAMES: ${{ inputs.names }}
+          REVIEW_RATING: ${{ inputs.rating }}
+          REVIEW_DATE: ${{ inputs.wedding_date }}
+          REVIEW_TEXT: ${{ inputs.review }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import re
+          from pathlib import Path
+
+          path = Path("js/reviews.js")
+          source = path.read_text(encoding="utf-8")
+          match = re.fullmatch(r"window\.approvedReviews\s*=\s*(\[.*\]);\s*", source, re.S)
+          if not match:
+              raise SystemExit("js/reviews.js is not in the expected format")
+
+          reviews = json.loads(match.group(1))
+          reviews.append({
+              "name": os.environ["REVIEW_NAMES"].strip(),
+              "rating": int(os.environ["REVIEW_RATING"]),
+              "date": os.environ["REVIEW_DATE"].strip(),
+              "review": os.environ["REVIEW_TEXT"].strip(),
+          })
+          path.write_text(
+              "window.approvedReviews = "
+              + json.dumps(reviews, ensure_ascii=False, indent=2)
+              + ";\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Publish review
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/reviews.js
+          git commit -m "Add approved website review"
+          git push
